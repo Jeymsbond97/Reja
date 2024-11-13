@@ -4,6 +4,12 @@ const express = require("express");
 const app = express();
 const http = require('http');
 
+
+/*  Server yaratishni ikki hil usuli bor : 
+  1. Traditional method yani bu biz buni express package yordami ejs orqali yaratdik.
+  2. Single page orqali yani bunda biz reac orqali yaratishimiz mumkun!
+
+*/
 // 1  Kirish codelari yoziladi:
 
 app.use(express.static('public'));
