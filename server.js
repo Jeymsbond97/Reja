@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: true}));
 
 // 3  Bu qismda tradional usulda backendni ichida frontend qismi yasaladi => Views ga bog'liq ko'dlar yoziladi:
 app.set('views', "views");
-app.set("view engine", 'ejs')
+app.set("view engine", 'ejs'); 
 
 // 4 Bu qadam asosan routerlarga mo'ljallangan, ya'ni Routing codelar yoziladi:
 app.post('/create-item', (req, res)=>{
