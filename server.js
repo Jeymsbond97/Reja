@@ -22,17 +22,26 @@ app.use(express.urlencoded({extended: true}));
 
 // 3  Bu qismda tradional usulda backendni ichida frontend qismi yasaladi => Views ga bog'liq ko'dlar yoziladi:
 app.set('views', "views");
-app.set("view engine", 'esj')
+app.set("view engine", 'ejs')
 
 // 4 Bu qadam asosan routerlarga mo'ljallangan, ya'ni Routing codelar yoziladi:
+app.post('/create-item', (req, res)=>{
+    console.log(req.body);     /// Post -> bu o'zi bilan malumot olib keladi va uni database ga yozish uchun xizmat qiladi:
+    res.json({test: "succes"});
+})
 
-app.get('/hello', function(req, res) {
-    res.end(`<h1 style = "background: red"> You are in hello section</h1>`);
+
+app.get('/', function(req, res) {
+    res.render('harid');   /// get -> Bu esa database dan malumot olish vao'qish uchun ishlatiladi:
 });
 
-app.get('/gift', function(req, res) {
-    res.end(`<h1 style = "background: blue; color: white"> You are in gift section</h1>`);
-});
+// app.get('/hello', function(req, res) {
+//     res.end(`<h1 style = "background: red"> You are in hello section</h1>`);
+// });
+
+// app.get('/gift', function(req, res) {
+//     res.end(`<h1 style = "background: blue; color: white"> You are in gift section</h1>`);
+// });
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function(){
