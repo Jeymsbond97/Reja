@@ -1,9 +1,21 @@
 console.log(' web Serverni boshlashlash')
 
 const express = require("express");
+const res = require('express/lib/response')
 const app = express();
 const http = require('http');
+const fs = require('fs');
 
+
+let user;
+fs.readFile("database/user.json", "utf-8", (err, data)=>{
+    if(err){
+        console.log("Error:", err);
+    }
+    else{
+        user = JSON.parse(data);
+    }
+})
 
 /*  Server yaratishni ikki hil usuli bor : 
   1. Traditional method yani bu biz buni express package yordami ejs orqali yaratdik.
@@ -26,10 +38,13 @@ app.set("view engine", 'ejs');
 
 // 4 Bu qadam asosan routerlarga mo'ljallangan, ya'ni Routing codelar yoziladi:
 app.post('/create-item', (req, res)=>{
-    console.log(req.body);     /// Post -> bu o'zi bilan malumot olib keladi va uni database ga yozish uchun xizmat qiladi:
-    res.json({test: "succes"});
+    // console.log(req.body);     /// Post -> bu o'zi bilan malumot olib keladi va uni database ga yozish uchun xizmat qiladi:
+    // res.json({test: "succes"});
 })
 
+app.get('/author', (req, res)=> {
+    res.render('author', {user: user} )
+})
 
 app.get('/', function(req, res) {
     res.render('harid');   /// get -> Bu esa database dan malumot olish vao'qish uchun ishlatiladi:
@@ -46,4 +61,5 @@ const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function(){
     console.log(`The server is running seccesfully on port: ${PORT}`)
-});
+}); 
+
