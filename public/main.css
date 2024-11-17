@@ -1,3 +1,10 @@
+ /* Initial standarts */
+
+*{
+    box-sizing: border-box;
+}
+
+/* Main Standarts For 3 Sides */
 
 .frame{
     width: 100%;
@@ -28,6 +35,10 @@
     background: white;
 }
 
+/* Main Standarts Ended */
+
+/* Middle Slide Started  here*/
+
 .main_frame .middle_frame{
     position: relative;
     width: 970px;
@@ -36,11 +47,194 @@
     margin-right: 27px;
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
-    /* Bg color */
-    background: #744d4d;
 
 }
+
+.middle_top{
+        /* Background Image */
+    position: absolute;
+    width: 971px;
+    height: 454.33px;
+    bottom: 5.76px;
+    top: -25px;
+
+    /* White */
+    background: rgb(255, 255, 255);
+}
+
+.middle_top-div{
+    width: 852px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 56px;
+    justify-content: space-between;
+}
+
+.middle_top-info{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+/* Rounds style */
+
+.round_1{
+        /* Ellipse 15 */
+    position: absolute;
+    width: 16.02px;
+    height: 15.57px;
+    left: 375.05px;
+    top: 40.86px;
+
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 180, 0, 0.8);
+}
+
+.round_2{
+    /* Rectangle 52 */
+    position: absolute;
+    width: 15.93px;
+    height: 15.65px;
+    left: 560.43px;
+    top: 333.69px;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 71, 255, 0.8);
+    transform: rotate(25.41deg);
+}
+
+.round_3{
+    /* Ellipse 12 */
+    position: absolute;
+    width: 16.02px;
+    height: 15.57px;
+    left: 855.55px;
+    top: 62.26px;  
+    box-sizing: border-box;
+    border: 2px solid rgba(5, 255, 0, 0.8);
+}
+
+.round_4{
+        /* Ellipse 16 */
+    position: absolute;
+    width: 16.02px;
+    height: 15.57px;
+    left: 423.1px;
+    top: 422.22px;
+    box-sizing: border-box;
+    border: 2px solid rgba(5, 255, 0, 0.8);
+}
+
+.round_5{
+        /* Rectangle 52 */
+    position: absolute;
+    width: 15.93px;
+    height: 15.65px;
+    left: 26.43px;
+    top: 163.69px;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 71, 255, 0.8);
+    transform: rotate(25.41deg);
+}
+
+/* Rounds End */
+/* Middle Top Infos */
+
+.middle_top-main .main_info{
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.middle_top-text .middle_dec{
+        /* H6 - 16px */
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-left: 5px;
+    text-transform: capitalize;
+}
+
+.middle_top-btn .btn1{
+        /* Button/Book Me */
+    position: relative;
+    width: 134px;
+    height: 51px;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10;
+    padding: 16px 32px 16px 32px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+    /* Yellow */
+    background: rgb(255, 180, 0);
+}
+
+.btn1 p{
+        /* BOOK ME */
+    position: absolute;
+    width: 65px;
+    height: 19px;
+    left: 32px;
+    right: -7px;
+    top: 16px;
+    bottom: -16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+
+
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.btn1 img{
+        /* Vector */
+    position: relative;
+    width: 15.67px;
+    height: 10.37px;
+    top: 2px;
+    left: 40px;
+}
+
+/* Middle Main Img */
+
+.midde_top-img{
+        /* Your Image 1 */
+    position: relative;
+    width: 326.06px;
+    height: 441.63px;
+    bottom: -3px;
+ 
+}
+
+/* Middle Top Section End */
+
+/* Right side style Start*/
 
 .main_frame .right_frame{
     position: relative;
@@ -52,6 +246,8 @@
     align-items: center;
     background: white;
 }
+
+/* Left Side Style Start */
 
  .main_frame .left_1{
     position: relative;
@@ -149,7 +345,6 @@
     filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
     /* Yellow */
     background: rgb(255, 180, 0);
-
 }
 
 .link_href .icon_1{
@@ -313,3 +508,5 @@
     margin-left: 5px;
     text-transform: capitalize;
 }
+
+/* Left Side Style End */
