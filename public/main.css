@@ -231,8 +231,59 @@
     bottom: -3px;
  
 }
-
 /* Middle Top Section End */
+
+
+/* Middle Bottom Section */
+
+.middle_bot{
+        /* Background */
+    background: rgb(240, 240, 246);
+    position: relative;
+    width: 970px;
+    height: 653px;
+    margin-left: 30px;
+    right: 27px;
+    display: flex;
+    flex-direction: column;
+    top: 606px;
+}
+
+.main_service-card{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.service_card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+.card-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}   
 
 /* Right side style Start*/
 
