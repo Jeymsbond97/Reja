@@ -1,13 +1,18 @@
 
 {
 
-"name": "Steve",
+"name": "Tokhirbek",
 "profession": "Software Engineer",
 "age": 20,
 "residence": "S.Korea",
 "adress": "Jeonju",
-"languages": ["Uzbek", "Korean", "English"],
-"skills":  ["Css","Js","NodeJS","Python"],
+"languages": [ { "name": "Uzbek", "progress": 100 },
+{ "name": "Korean", "progress": 60 },
+{ "name": "English", "progress": 80 }],
+"skills":  [{ "name": "CSS", "progress": 85 },
+{ "name": "JavaScript", "progress": 90 },
+{ "name": "NodeJS", "progress": 80 },
+{ "name": "Python", "progress": 70 }],
 "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
 "work_place": "IT COMPANY",
 "service_desc": "Input hello woirsd wirth sos d=clear asn action with ocion blue text line zero options x emdi why so expensive with so destison ",
