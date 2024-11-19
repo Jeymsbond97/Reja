@@ -579,7 +579,7 @@
 
 }
 
-.languages_one{
+.language-name{
         /* Paragraph Progress - 15 */
     color: rgb(118, 118, 118);
     font-family: Inter;
@@ -588,10 +588,29 @@
     line-height: 24px;
     letter-spacing: 0%;
     text-align: left;
-    margin-top: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
     text-transform: capitalize;
 }
 
+.language-progress{
+        /* Paragraph Progress - 15 */
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.progress{
+    /* Yellow */
+    border: 0.5px solid rgb(255, 180, 0);
+    border-radius: 30px;
+
+}
 .main_frame .left_4{
      /* Skills */
     position: relative;
@@ -610,19 +629,6 @@
     line-height: 123.6%;
     letter-spacing: 0%;
     text-align: left;
-    text-transform: capitalize;
-}
-
-.left_4 .skill-one{
-    /* Paragraph Progress - 15 */
-    color: rgb(118, 118, 118);
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-top: 10px;
     text-transform: capitalize;
 }
 

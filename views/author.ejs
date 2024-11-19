@@ -97,21 +97,29 @@
                         Languages
                     </div>
                     <div class="languages_bar">
-                        <% user.languages.forEach(function(language) { %>
-                            <div>
-                                <div class="languages_one"><%= language.name %></div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" 
-                                     role="progressbar" 
-                                     style="width: <%= language.progress %>%" 
-                                     aria-valuenow="<%= language.progress %>" 
-                                     aria-valuemin="0" 
-                                     aria-valuemax="100">
-                                    <%= language.progress %>%
-                                </div>
-                            </div>
-                        <% }); %>
+                             <!-- NEW STYLE HERE -->
+                         
+                                <% user.languages.forEach(function(language) { %>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="language-name" style="text-align: left;">
+                                            <div><%= language.name %></div>
+                                        </div>
+                                        <div class="language-progress" style="text-align: right;">
+                                            <div><%= language.progress %>%</div>
+                                        </div>
+                                    </div>
+                            
+                                    <!-- Progress bar -->
+                                    <div class="progress mb-3" style="height: 6px; background-color: #f1f1f1;">
+                                        <div class="progress-bar bg-warning" 
+                                            role="progressbar" 
+                                            style="width: <%= language.progress %>%; margin-top: 1px; margin-bottom: 1px; background-color: #ffcc00;" 
+                                            aria-valuenow="<%= language.progress %>" 
+                                            aria-valuemin="0" 
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                <% }); %>
                     </div>   
                 </div>
                 <!-- End Language -->
@@ -122,21 +130,29 @@
                         Skills
                     </div>
                     <div class="skill">
+                              <!-- NEW SKILLS HERE -->
                         <% user.skills.forEach(function(skill) { %>
-                            <div>
-                                <div class="skill-one"><%= skill.name %></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="language-name" style="text-align: left;">
+                                    <div><%= skill.name %></div>
+                                </div>
+                                <div class="language-progress" style="text-align: right;">
+                                    <div><%= skill.progress %>%</div>
+                                </div>
                             </div>
-                            <div class="progress">
+                    
+                            <!-- Progress bar -->
+                            <div class="progress mb-3" style="height: 6px; background-color: #f1f1f1;">
                                 <div class="progress-bar bg-warning" 
-                                     role="progressbar" 
-                                     style="width: <%= skill.progress %>%" 
-                                     aria-valuenow="<%= skill.progress %>" 
-                                     aria-valuemin="0" 
-                                     aria-valuemax="100">
-                                    <%= skill.progress %>%
+                                    role="progressbar" 
+                                    style="width: <%= skill.progress %>%; margin-top: 1px; margin-bottom: 1px; background-color: #ffcc00;" 
+                                    aria-valuenow="<%= skill.progress %>" 
+                                    aria-valuemin="0" 
+                                    aria-valuemax="100">
                                 </div>
                             </div>
                         <% }); %>
+
                     </div>
                 </div>
                 <!-- End Skills -->
