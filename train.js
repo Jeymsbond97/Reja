@@ -13,13 +13,13 @@ function maslahatBering(a, callback) {
     if(typeof a !== "number") callback("Enter number", null);
     else if(a <= 20) callback(null, list[0]);
     else if(a > 20 && a <= 30 ) callback (null, list[1]);
-    else if(a > 20 && a <= 30 ) callback (null, list[2]);
-    else if(a > 20 && a <= 30 ) callback (null, list[3]);
-    else if(a > 20 && a <= 30 ) callback (null, list[4]);
+    else if(a > 30 && a <= 40 ) callback (null, list[2]);
+    else if(a > 40 && a <= 50 ) callback (null, list[3]);
+    else if(a > 50 && a <= 60 ) callback (null, list[4]);
                     else {
-                         setImmediate(function () {
+                         setTimeout(function () {
                               callback(null, list[5]);
-                         }, 100);
+                         }, 2000);
                     }
 
                     // else{
@@ -29,7 +29,7 @@ function maslahatBering(a, callback) {
 
 console.log("Passed here 0");
 
-maslahatBering(65, (err, data) => {
+maslahatBering(55, (err, data) => {
      if(err) console.log("Error:", err);
      else{
         console.log('Answer:', data )
@@ -84,7 +84,7 @@ function harfSanash(harf, matn) {
  harfSanash("ee", "enginer");
 
  console.log("================================");
- 
+
  harfSanash("e", 1);
 
  console.log("================================");
