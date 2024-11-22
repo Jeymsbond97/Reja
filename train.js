@@ -240,7 +240,7 @@ function countDigitsAsync(input) {
   });
 }
 
-// Call section:
+// Call section: then/catch
 
 //  countDigitsAsync("ad2a54y79wet0sfgb9")
 //   .then(result => console.log(result))
