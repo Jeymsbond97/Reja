@@ -242,10 +242,26 @@ function countDigitsAsync(input) {
 
 // Call section:
 
- countDigitsAsync("ad2a54y79wet0sfgb9")
-  .then(result => console.log(result))
-  .catch(err => console.error(err));
+//  countDigitsAsync("ad2a54y79wet0sfgb9")
+//   .then(result => console.log(result))
+//   .catch(err => console.error(err));
 
 
 console.log("~~~~~~~~~~~~~~~~ 3 ~~~~~~~~~~~~~~~~~~")
+
+/*
+  Yoqrida define qismida promise bilan yozilgan codeni Call qismini Await bilan yozish quydagicha bo'ladi.
+*/
+
+// Define 
+// .......
+// Call section => await:
+
+async function boshla() {
+  let natija = await countDigitsAsync("ad2a5");
+  console.log(natija);
+  natija = await countDigitsAsync("ad2a54y");
+  console.log(natija);
+}
+boshla();
 
