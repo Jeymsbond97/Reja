@@ -149,4 +149,40 @@ function harfSanash(harf, matn) {
 
  harfSanash(2, "EngineErINg");
 
- console.log("================================")
+ console.log("================================");
+
+
+
+
+
+
+
+/// TASK B:
+
+/*
+   Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+   MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi
+*/
+
+// SOLUTION: N0:1 with synchronous function:
+
+function countDigits(string){
+    if(typeof string !== "string"){
+      return "Please, faqat matn kiriting"
+    }
+    let digit = 0;
+    for(let char of string){
+      if(!isNaN(char)){
+        digit++;
+      }
+     
+    }
+    console.log("Siz kiritigan so'zda " + digit + " ta raqam bor");
+
+}
+
+countDigits("ad2a54y79wet0sfgb9")
+
+
+
+// SOLUTION: 
