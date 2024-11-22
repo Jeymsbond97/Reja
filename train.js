@@ -183,6 +183,36 @@ function countDigits(string){
 
 countDigits("ad2a54y79wet0sfgb9")
 
+console.log("~~~~~~~~~~~~~ 1 ~~~~~~~~~~~~~~")
+
+// SOLUTION: N0:2 with Asynchronous function
+
+//Define section:
+function countDigitsAsync(text, callback){
+  if(typeof text !== "string" ) {
+    callback("Iltimos, faqat matn kiriting", null);
+    return;
+  }
+  let number = 0;
+  for( let char of text){
+    if(!isNaN(char)){
+      number++;
+    }
+  }
+   
+  callback(null, `Siz kiritgan matnda ${number} ta raqam bor`)
+}
+
+// Call section:
+
+countDigitsAsync("ad2a54y79wet0sfgb9", (err, data)=>{
+  if(err){
+    console.log(err);
+  }else{
+    console.log(data);
+  }
+})
+
+console.log("~~~~~~~~~~~~~ 2 ~~~~~~~~~~~~~~")
 
 
-// SOLUTION: 
