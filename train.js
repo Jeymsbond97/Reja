@@ -185,10 +185,10 @@ countDigits("ad2a54y79wet0sfgb9")
 
 console.log("~~~~~~~~~~~~~ 1 ~~~~~~~~~~~~~~")
 
-// SOLUTION: N0:2 with Asynchronous function
+// SOLUTION: N0:2 with callback function
 
 //Define section:
-function countDigitsAsync(text, callback){
+function countDigitsCall(text, callback){
   if(typeof text !== "string" ) {
     callback("Iltimos, faqat matn kiriting", null);
     return;
@@ -205,7 +205,7 @@ function countDigitsAsync(text, callback){
 
 // Call section:
 
-countDigitsAsync("ad2a54y79wet0sfgb9", (err, data)=>{
+countDigitsCall("ad2a54y79wet0sfgb9", (err, data)=>{
   if(err){
     console.log(err);
   }else{
@@ -215,4 +215,37 @@ countDigitsAsync("ad2a54y79wet0sfgb9", (err, data)=>{
 
 console.log("~~~~~~~~~~~~~ 2 ~~~~~~~~~~~~~~")
 
+
+// SOLUTION: N0:3 With asynchrounous Function:
+
+// Define section:
+
+function countDigitsAsync(input) {
+  return new Promise((resolve, reject) => {
+      if (typeof input !== "string") {
+          reject("Please, faqat matn kiriting");
+          return;
+      }
+
+      let count = 0;
+      for (let char of input) {
+          if (!isNaN(char)) {
+              count++;
+          }
+      }
+
+      setTimeout(()=>{
+        resolve(`Siz kiritgan so'zda ${count} ta raqam bor`);
+      }, 3000);
+  });
+}
+
+// Call section:
+
+ countDigitsAsync("ad2a54y79wet0sfgb9")
+  .then(result => console.log(result))
+  .catch(err => console.error(err));
+
+
+console.log("~~~~~~~~~~~~~~~~ 3 ~~~~~~~~~~~~~~~~~~")
 
