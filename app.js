@@ -45,7 +45,19 @@ app.set("view engine", 'ejs');
 
 // 4 Bu qadam asosan routerlarga mo'ljallangan, ya'ni Routing codelar yoziladi:
 app.post('/create-item', (req, res)=>{
-    // console.log(req.body);     /// Post -> bu o'zi bilan malumot olib keladi va uni database ga yozish uchun xizmat qiladi:
+    console.log(req.body);  
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+        if(err) {
+            console.log(err);
+            res.end("something went wrong");
+        }else{
+            // console.log(data);
+            res.end("Successfully added")
+        }
+    });
+    
+    /// Post -> bu o'zi bilan malumot olib keladi va uni database ga yozish uchun xizmat qiladi:
     // res.json({test: "succes"});
 })
 
@@ -54,7 +66,17 @@ app.get('/author', (req, res)=> {
 })
 
 app.get('/', function (req, res) {
-    res.render('reja');   /// get -> Bu esa database dan malumot olish vao'qish uchun ishlatiladi:
+    db.collection("plans").find().toArray((err, data) =>
+    {
+        if(err){
+            console.log(err);
+            res.end('something went wrong')
+        } else{
+            console.log(data);
+            res.render('reja', {items: data });
+        }
+    })
+    // res.render('reja');   /// get -> Bu esa database dan malumot olish vao'qish uchun ishlatiladi:
 });
 
 // app.get('/hello', function(req, res) {
