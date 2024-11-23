@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "author": "nodemon author.ejs",
-     "dev": "nodemon server.js",
+    "dev": "nodemon app.js",
+    "server": "nodemon server.js",
     "train": "nodemon train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +16,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "mongodb": "^3.2.6",
     "nodemon": "^3.1.7"
   }
 }
