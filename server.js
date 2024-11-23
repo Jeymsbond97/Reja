@@ -46,20 +46,20 @@ app.get('/author', (req, res)=> {
     res.render('author', {user: user} )
 })
 
-app.get('/', function(req, res) {
-    res.render('harid');   /// get -> Bu esa database dan malumot olish vao'qish uchun ishlatiladi:
+app.get('/', function (req, res) {
+    res.render('reja');   /// get -> Bu esa database dan malumot olish vao'qish uchun ishlatiladi:
 });
 
 // app.get('/hello', function(req, res) {
 //     res.end(`<h1 style = "background: red"> You are in hello section</h1>`);
 // });
 
-// app.get('/gift', function(req, res) {
-//     res.end(`<h1 style = "background: blue; color: white"> You are in gift section</h1>`);
-// });
+app.get('/gift', function(req, res) {
+    res.end(`<h1 style = "background: blue; color: white"> You are in gift section</h1>`);
+});
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function(){
-    console.log(`The server is running seccesfully on port: ${PORT}`)
+    console.log(`The server is running seccesfully on port: ${PORT}, http://localhost:${PORT}`)
 }); 
 
