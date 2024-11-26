@@ -328,6 +328,14 @@ class Shop {
 const shop = new Shop(4, 6, 2)
 
 shop.allItems();
+
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 shop.additems("non", 3);
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 shop.allItems();
-shop.takeItems('banan', 7)
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+shop.takeItems('banan', 7);
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+shop.takeItems('nok', 2);
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+shop.allItems();
