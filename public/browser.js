@@ -10,7 +10,7 @@ function itemTemplate(item){
               <button data-id=${item._id} class="edit-me btn btn-secondary btn-sm mr-1">
                 O'zgarish
               </button>
-              <button data-id=${item._id}  class="delete-me btn btn-danger btn-sm">
+              <button data-id=${item._id} class="delete-me btn btn-danger btn-sm mr-1">
                 O'chirish
               </button>
            </div>
@@ -31,6 +31,25 @@ document.getElementById("create-form").addEventListener("submit", function(e){
         creatField.value ='';
         creatField.focus();
     }).catch((err)=> {
-        console.log("Iltimos, qaytadan urunib ko'ring!")
+        console.log("Iltimos, qaytadan urunib ko'ring!");
     })
+});
+
+document.addEventListener('click', (e)=>{
+    // Delete operation:
+    if(e.target.classList.contains("delete-me")){
+    if(confirm("Rostandan ham o'chirmoqchimisiz?")){
+        axios.post("/delete-item", {id: e.target.getAttribute("data-id")}).then((response)=>{
+            console.log(response.data);
+            e.target.parentElement.parentElement.remove();
+        }).catch((err)=>{
+            console.log("Iltimos, qaytadan urunib ko'ring!");
+        });
+    }
+    };
+
+    // Edit operation:
+    if(e.target.classList.contains("edit-me")){
+        
+    }
 })
