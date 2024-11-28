@@ -138,11 +138,23 @@ app.post("/delete-item", (req, res) =>{
 // Edit Operation:
 app.post('/edit-item', (req, res) => {
     const data = req.body;
-    console.log(data);
+    // console.log(data);
     db.collection("plans").findOneAndUpdate({ _id: new mongodb.ObjectId(data.id)}, {$set: {reja: data.new_input}}, function (err, date) {
         res.json({state: "done"})
     });
 
+})
+
+
+// Delete-All Operation:
+
+app.post("/delete-all", (req, res) =>{ 
+    // console.log("Kelgan malumot:", req)
+    if(req.body.delete_all){
+        db.collection("plans").deleteMany(function(){
+            res.json( {state: "Hamma rejalar o'chirildi!"})
+        })
+    }
 })
 
 app.get("/", function(req, res) {
