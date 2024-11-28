@@ -112,6 +112,7 @@ app.set("views", "views");
 app.set("view engine", "ejs"); 
 
 // *****4 - Rooting ga bogliq codelar********
+
 app.post("/create-item", (req, res) => {
     console.log('user entered /create-item');
     console.log(req.body);
@@ -123,7 +124,7 @@ app.post("/create-item", (req, res) => {
     })
 })
 
-
+//  Delete operation section:
 app.post("/delete-item", (req, res) =>{
     const id = req.body.id;
     db.collection("plans").deleteOne({
