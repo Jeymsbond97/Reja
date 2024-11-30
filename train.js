@@ -1,6 +1,29 @@
 console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 
 
+// D TASK:
+/*
+   Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+   MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+// SOLUTION:
+
+function checkString(string1, string2) {
+  if(string1 !== string2){
+    return false;
+  }
+
+  const sortString1 = string1.split("").sort().join('');
+  const sortString2 = string1.split("").sort().join('');
+  console.log(sortString1 + ' = ' + sortString2);
+  return true;
+ 
+ 
+}
+
+console.log(checkString("hello", "hello"))
+
 
 // console.log("Jack Ma Maslahatlari");
 
@@ -281,7 +304,7 @@ console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 
 // SOLUTION: 
 
-class Shop {
+ /* class Shop {
    constructor(non, banan, nok){
     this.items = {
       non: non,
@@ -338,4 +361,4 @@ shop.takeItems('banan', 7);
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 shop.takeItems('nok', 2);
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-shop.allItems();
+shop.allItems();  */
