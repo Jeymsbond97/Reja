@@ -8,4 +8,5 @@
 // Bu vazifasi projectdagi barcha log larni ko'rstaib beradi yoki Id orqali o'zimizga kerakli bo'lgan propjectni log larini ko'rishimiz mumkun;
 // 5-step: pm2 stop (Id) => bu orqali qaysi Id dagi projectni to'xtashish kerakligini buyuramiz;
 // 6-step: pm2 delete (Id) => Bu buyruq orqali qaysi proejectni o'chirish kerakligini buyuramiz;
-// 
+// 7 -step ufw status => bu securty code hissoblanadi va bu orqali portimizni tashqi olamdan kirishga ruxsaat berishimiz yoki berkitib qo'yishiimiz mumkun
+
