@@ -1,6 +1,45 @@
 console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 
 
+/*
+    E-TASK: 
+
+    Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+    MASALAN: getReverse("hello") return qilsin "olleh"
+
+*/
+
+
+
+// SOLUTION: 
+
+function reverseString(param){
+   let split = param.split("");
+   // console.log(split);
+   let reverse = split.reverse();
+  // console.log(reverse);
+  let join = reverse.join('');
+  // console.log(join);
+  return join;
+}
+
+console.log(reverseString('HELLO'));
+console.log(reverseString('Tokhirbek'));
+
+
+
+
+
+
+/****************************************************************** */
+
+
+
+
+
+
+
+
 // D TASK:
 /*
    Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
@@ -9,20 +48,36 @@ console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 
 // SOLUTION:
 
-function checkString(string1, string2) {
-  if(string1 !== string2){
-    return false;
-  }
+// function checkString(string1, string2) {
+//   if(string1 !== string2){
+//     return false;
+//   }
 
-  const sortString1 = string1.split("").sort().join('');
-  const sortString2 = string1.split("").sort().join('');
-  console.log(sortString1 + ' = ' + sortString2);
-  return true;
+//   const sortString1 = string1.split("").sort().join('');
+//   const sortString2 = string1.split("").sort().join('');
+//   console.log(sortString1 + ' = ' + sortString2);
+//   return true;
  
  
-}
+// }
 
-console.log(checkString("hello", "hello"))
+// console.log(checkString("hello", "hello"))
+
+
+
+
+
+
+
+
+/****************************************************************** */
+
+
+
+
+
+
+
 
 
 // console.log("Jack Ma Maslahatlari");
@@ -124,6 +179,20 @@ console.log(checkString("hello", "hello"))
 
 
 
+
+
+/****************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
 /// TASK A 
 
 
@@ -177,6 +246,18 @@ console.log(checkString("hello", "hello"))
 //  harfSanash(2, "EngineErINg");
 
 //  console.log("================================");
+
+
+
+
+
+
+
+
+
+/****************************************************************** */
+
+
 
 
 
@@ -294,6 +375,17 @@ console.log(checkString("hello", "hello"))
 
 
 
+
+
+
+
+/****************************************************************** */
+
+
+
+
+
+
 //  TASK - C: 
 
 /*
@@ -362,3 +454,8 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 shop.takeItems('nok', 2);
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 shop.allItems();  */
+
+
+
+
+/****************************************************************** */
