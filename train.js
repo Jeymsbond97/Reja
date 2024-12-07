@@ -1,5 +1,20 @@
 console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 
+// TASK F
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+
+
+
+
+/****************************************************************** */
+
+
 
 /*
     E-TASK: 
@@ -13,18 +28,18 @@ console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 
 // SOLUTION: 
 
-function reverseString(param){
-   let split = param.split("");
-   // console.log(split);
-   let reverse = split.reverse();
-  // console.log(reverse);
-  let join = reverse.join('');
-  // console.log(join);
-  return join;
-}
+// function reverseString(param){
+//    let split = param.split("");
+//    // console.log(split);
+//    let reverse = split.reverse();
+//   // console.log(reverse);
+//   let join = reverse.join('');
+//   // console.log(join);
+//   return join;
+// }
 
-console.log(reverseString('HELLO'));
-console.log(reverseString('Tokhirbek'));
+// console.log(reverseString('HELLO'));
+// console.log(reverseString('Tokhirbek'));
 
 
 
