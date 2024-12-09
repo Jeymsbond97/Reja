@@ -25,7 +25,6 @@ console.log("Train.js ishga tushdi~~~~~~~~~~~~~~~~")
 */
 
 
-
 // SOLUTION: 
 
 // function reverseString(param){
